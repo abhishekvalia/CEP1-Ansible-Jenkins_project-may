@@ -15,3 +15,5 @@
     command: chdir=/tmp/devopscode docker build -t myimage:ansible .
   - name: Run the image to deploy application on tomcat container
     command: docker run -d -P myimage:ansible
+  - name: Restart the docker container
+    command: docker restart myimage:ansible
